@@ -7,7 +7,7 @@
 	<a name="c{record.uid}"></a>
 </f:if>
 <v:tag name="{v:variable.get(name: 'settings.container.types.{record.CType}') -> v:or(alternative: settings.container.types.default)}"
-         class="{settings.content.settings.container.className}">
+	class="content-block {settings.content.settings.container.className}" id="content-block-{record.uid}-{record.header -> v:or(alternative: record.titleAttribute) -> v:or(alternative: 'content {record.uid}') -> v:format.url.sanitizeString()}">
 	<f:render section="Main" />
 </v:tag>
 
